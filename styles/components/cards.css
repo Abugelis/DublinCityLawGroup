@@ -1,0 +1,20 @@
+.card svg{
+    width: var(--icon-size);
+    height: var(--icon-size);
+    color: var(--color-neutral-light);
+}
+
+.card {
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-secondary);
+    border-radius: var(--radius);
+    padding: 1rem;
+    color: var(--color-neutral-light);
+    box-shadow: var(--shadow);
+    background: linear-gradient(
+    135deg,
+    #0D2B45 0%,
+    #1E4A73 100%
+);
+}

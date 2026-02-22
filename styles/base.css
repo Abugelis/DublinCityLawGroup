@@ -1,0 +1,284 @@
+/* ---------------------------- CSS RESET ------------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #FAF7F2;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+a:focus {
+    outline: 2px solid #1E1E1E;
+    outline-offset: 2px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+/* ---------------------------- FONTS ------------------------------- */
+@font-face {
+    font-family: 'Lora';
+    src: url('../assets/fonts/lora-regular-webfont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('../assets/fonts/jost-400-book-webfont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('../assets/fonts/jost-500-medium-webfont.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('../assets/fonts/jost-700-bold-webfont.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ---------------------------- VARIABLES ------------------------------- */
+:root {
+    /* Colors */
+    --color-primary: #0D2B45;       /* deep navy */
+    --color-secondary: #C9A96E;     /* gold */
+    --color-accent: #1E4A73;        /* mid-blue */
+    --color-neutral-light: #F5F7FA; /* background */
+    --color-neutral-dark: #333333;  /* text */
+    --color-bronze: #8C6239;        /* optional accent */
+
+    /* Typography */
+    --font-primary: 'Jost', sans-serif;
+    --font-secondary: 'Lora', serif;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* Font Sizes */
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.75rem;
+    --fs-h4: 1.5rem;
+    --fs-h5: 1.25rem;
+    --fs-h6: 1rem;
+    --fs-body: 1rem;
+    --fs-small: 0.875rem;
+
+    /* Line Heights */
+    --lh-h1: 1.2;
+    --lh-h2: 1.3;
+    --lh-h3: 1.35;
+    --lh-body: 1.6;
+
+    /* Letter Spacing */
+    --ls-heading: 0.5px;
+    --ls-body: 0px;
+
+    /* Logo */
+    --logo-size: 70px;
+
+    /* Icons */
+    --icon-size: 84px;
+
+    /* Layout / UI */
+    --container-width: 1920px;
+    --container-padding: 1rem;
+    --radius: 6px;
+    --shadow: 1px 1px 5px rgba(0,0,0,0.2);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* Responsive Breakpoints */
+
+@media (min-width: 768px) {
+:root {
+    
+    --container-padding: 2rem;
+
+    /* Logo size */
+    --logo-size: 80px;
+    }
+}
+
+@media (min-width: 1024px) {
+:root {
+    --container-padding: 4rem;
+
+    /* Logo size */
+    --logo-size: 90px;
+    }
+}
+
+@media (min-width: 1440px) {
+:root {
+    --container-padding: 8rem;
+
+    /* Logo size */
+    --logo-size: 100px;
+    }
+}
+@media (min-width: 1920px) {
+:root {
+    --container-padding: 12rem;
+
+    /* Logo size */
+    --logo-size: 110px;
+
+    }
+}
+
+/* ---------------------------- TYPOGRAPHY ------------------------------- */
+body {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    letter-spacing: var(--ls-body);
+    color: var(--color-neutral-dark);
+    background-color: var(--color-neutral-light);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    letter-spacing: var(--ls-heading);
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-medium);
+}
+
+a:hover, a:focus {
+    color: var(--color-accent);
+}
+
+/* ---------------------------- LAYOUT HELPERS ------------------------------- */
+.container {
+    max-width: var(--container-width);
+    margin: 0;
+    padding: 4rem var(--container-padding);
+}
+
+.section-heading {
+    padding-bottom: 3rem;
+}
+
+/* ---------------------------- BUTTON DEFAULTS ------------------------------- */
+button {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--fs-body);
+    cursor: pointer;
+    border-radius: var(--radius);
+    transition: all var(--transition-medium);
+}
+
+/* ---------------------------- IMAGES ------------------------------- */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ---------------------------- TRANSITIONS / EFFECTS ------------------------------- */
+/*
+a, button {
+    transition: all var(--transition-medium);
+}
+*/
+button {
+    transition: background-color var(--transition-medium), color var(--transition-medium), border-color var(--transition-medium);
+}
+
+a {
+    transition: color var(--transition-medium);
+}
+
+/* ---------------------------- RESPONSIVE RULES ------------------------------- */
+
+/* Mobile-first (base is mobile) */
+
+/* Typography adjustments */
+@media (min-width: 768px) {
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 2rem; }
+    p { font-size: 1.2rem; }
+
+    .container { padding: 4rem var(--container-padding); }
+}
+
+@media (min-width: 1024px) {
+    h1 { font-size: 4rem; }
+    h2 { font-size: 2.75rem; }
+    h3 { font-size: 2.25rem; }
+    a { font-size: 1.2rem; }
+    p { font-size: 1.3rem; }
+
+    .container { padding: 4rem var(--container-padding); }
+}
+
+@media (min-width: 1440px) {
+    h1 { font-size: 4.5rem; }
+    h2 { font-size: 3rem; }
+    h3 { font-size: 2.5rem; }
+    a { font-size: 1.6rem; }
+    p { font-size: 1.4rem; }
+
+    .container { padding: 4rem var(--container-padding); }
+}
+
+/* Optional: responsive utilities */
+@media (max-width: 767px) {
+    .flex {
+        flex-direction: column;
+    }
+}

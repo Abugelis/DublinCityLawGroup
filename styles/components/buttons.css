@@ -1,0 +1,84 @@
+/* Primary Button filled, main color */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border: 2px solid var(--color-primary);
+    padding: 1rem 3rem;
+    border-radius: var(--radius);
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--color-neutral-light);
+    border-color: var(--color-secondary);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Secondary Button just border, transparent */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-neutral-light);
+    border: 2px solid var(--color-primary);
+    padding: 1rem 2rem;
+    border-radius: var(--radius);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-neutral-light);
+    border-color: var(--color-primary);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Tertiary Button filled, main color but smaller */
+.btn-tretiary {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border: 2px solid var(--color-primary);
+    padding: 0.7rem 2rem;
+    border-radius: var(--radius);
+    font-weight: 500;
+}
+
+.btn-tretiary:hover {
+    background-color: transparent;
+    color: var(--color-neutral-light);
+    border-color: var(--color-secondary);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .hero-cta-primary {
+        padding: 1.2rem 4rem;
+    }
+
+    .hero-cta-secondary {
+        padding: 1.2rem 3rem;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .hero-cta-primary {
+        padding: 1.3rem 4.5rem;
+    }
+
+    .hero-cta-secondary {
+        padding: 1.3rem 3.5rem;
+    }
+
+}
+
+@media (min-width: 1440px) { 
+    .hero-cta-primary {
+        padding: 1.5rem 5rem;
+    }
+
+    .hero-cta-secondary {
+        padding: 1.5rem 4rem;
+    }
+
+
+}
