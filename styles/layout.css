@@ -45,6 +45,11 @@ header a:focus {
     color: var(--color-secondary);
 }
 
+#navMenu a.active {
+    color: var(--color-secondary);
+}
+
+
 /* ---------------- HAMBURGER BUTTON ---------------- */
 .nav-toggle {
     display: none;
@@ -110,6 +115,8 @@ header a:focus {
     /* Stack header */
     header {
         flex-direction: row;
+        position: fixed;
+        top: 0;
     }
 
     /* Show hamburger */
@@ -162,6 +169,11 @@ header a:focus {
 /* ---------------------------- NAV (LAPTOP & DESKTOP) ------------------------------- */
 @media (min-width: 768px) {
 
+    header {
+        position: sticky;
+        top: 0;
+    }
+
     nav ul {
         display: flex;
         gap: 2rem;
@@ -194,27 +206,62 @@ header a:focus {
     nav ul li a:hover::after {
         transform: scaleX(1);
     }
-}
 
+    nav ul li a.active::after {
+        transform: scaleX(1);
+    }
+}
 
 /* ---------------------------- FOOTER ------------------------------- */
 footer {
-    background-color: var(--color-neutral-dark);
+    background-color: var(--color-primary);
     color: var(--color-neutral-light);
-    padding: var(--container-padding) 1rem;
     text-align: center;
-    font-size: var(--fs-small);
+    font-size: var(--fs-medium);
 }
 
 footer a {
     color: var(--color-neutral-light);
-    text-decoration: underline;
+    font-size: var(--fs-h5);
 }
 
 footer a:hover,
 footer a:focus {
     color: var(--color-secondary);
 }
+
+footer img {
+    height: var(--logo-size);
+    width: var(--logo-size);
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+footer h4 {
+    color: var(--color-secondary);
+}
+
+footer .grid { 
+    gap: 4rem;
+}
+
+.footer-services-links.flex {
+    gap: 0.5rem;
+}
+
+
+
+@media (min-width: 768px) {
+    footer .grid {
+        grid-template-columns: 0.6fr 1.2fr 1.2fr;
+        align-items: flex-start;
+    }
+
+    .footer-contact-info {
+        text-align: left;
+    }
+}
+
 
 
 /* ---------------------------- GRID SYSTEM ------------------------------- */

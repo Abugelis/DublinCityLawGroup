@@ -1,0 +1,66 @@
+/* Slider container: reserve space for arrows */
+.custom-slider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    
+    position: relative;
+}
+
+/* Track wrapper with overflow hidden */
+.slider-track-wrapper {
+    overflow: hidden;
+    flex: 1;
+}
+
+/* Track that moves */
+.slider-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+}
+
+/* Arrows sit outside cards now */
+.slider-arrow {
+    position: relative; /* no more absolute */
+    transform: none;    /* remove translate */
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-secondary);
+    color: white;
+    cursor: pointer;
+    flex-shrink: 0; /* prevent shrinking */
+}
+
+/* Margin between arrows and track */
+.slider-arrow.prev {
+    margin-right: 10px;
+}
+
+.slider-arrow.next {
+    margin-left: 10px;
+}
+
+.slider-arrow:hover {
+    background-color: var(--color-accent);
+}
+
+.slider-arrow:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.slider-track img {
+    user-select: none;
+    pointer-events: none;
+}
+
+@media (max-width: 767px) {
+    .slider-arrow {
+        display: none;
+    }
+}

@@ -76,6 +76,7 @@ button {
 :root {
     /* Colors */
     --color-primary: #0D2B45;       /* deep navy */
+    --color-section-soft: #E6EFF6; /* light blue-gray for section backgrounds */
     --color-secondary: #C9A96E;     /* gold */
     --color-accent: #1E4A73;        /* mid-blue */
     --color-neutral-light: #F5F7FA; /* background */
@@ -119,6 +120,7 @@ button {
     /* Layout / UI */
     --container-width: 1920px;
     --container-padding: 1rem;
+    --section-heading-padding: 1rem;
     --radius: 6px;
     --shadow: 1px 1px 5px rgba(0,0,0,0.2);
 
@@ -134,6 +136,8 @@ button {
 :root {
     
     --container-padding: 2rem;
+
+    --section-heading-padding: 2rem;
 
     /* Logo size */
     --logo-size: 80px;
@@ -209,7 +213,7 @@ a:hover, a:focus {
 }
 
 .section-heading {
-    padding-bottom: 3rem;
+    padding-bottom: var(--section-heading-padding);
 }
 
 /* ---------------------------- BUTTON DEFAULTS ------------------------------- */

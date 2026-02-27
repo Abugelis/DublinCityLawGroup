@@ -6,12 +6,14 @@
         
         <title>Dublin City Law Group</title>
 
+        <script src="sripts/slider.js" defer></script>
         <script src="sripts/nav.js" defer></script>
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/layout.css">
         <link rel="stylesheet" href="styles/pages/home.css">
         <link rel="stylesheet" href="styles/components/buttons.css">
         <link rel="stylesheet" href="styles/components/cards.css">
+        <link rel="stylesheet" href="styles/components/slider.css">
     </head>
     <body>
         <!-- Navigation -->
@@ -26,10 +28,10 @@
 
             <nav id="navMenu">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -136,5 +138,155 @@
                 </div>
             </div>
         </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>About Our Firm</h2>
+                    <p>Dublin City Law Group is a premier legal firm dedicated to providing exceptional legal services to individuals and businesses in Dublin and beyond.</p>
+                </div>
+                <div class="about-content flex">
+                    <div class="about-image">
+                        <img src="/assets/images/about-us-team.webp" alt="About Us Image">
+                    </div>
+                    <div class="about-text">
+                        <p>With a team of experienced attorneys, we specialize in a wide range of legal areas including family law, criminal defense, personal injury, employment law, property law, and corporate law. Our commitment to excellence and client satisfaction sets us apart as a trusted legal partner.</p>
+                        <p>At Dublin City Law Group, we understand that legal issues can be complex and stressful. That's why we are dedicated to providing personalized attention and tailored legal solutions to meet the unique needs of each client. Whether you're facing a legal challenge or seeking guidance on a legal matter, our team is here to help you navigate the complexities of the legal system with confidence.</p>
+                        <a class="btn-tretiary alt" href="#">Meet Our Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Small CTA-->
+        <section class="small-cta">
+            <div class="container">
+                <div class="cta-content flex">
+                    <h2>Need Legal Help?</h2>
+                    <p>Contact Dublin City Law Group today for a consultation and let us help you with your legal needs.</p>
+                    <a class="btn-primary" href="#">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Client Testimonials</h2>
+                    <p>What our clients say about our legal services.</p>
+                </div>
+                <div class="testimonials-content grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card card">
+                        <p><i>"Dublin City Law Group provided exceptional legal support during a complex business transaction. Their expertise and professionalism were invaluable."</i></p>
+                        <h4>- John Smith</h4>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card card">
+                        <p><i>"I was impressed by the attention to detail and the personalized approach of the team. They helped me navigate a difficult family law matter with care and understanding."</i></p>
+                        <h4>- Sarah Johnson</h4>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card card">
+                        <p><i>"The legal team at Dublin City Law Group delivered outstanding results in my employment dispute. Their advocacy was both effective and compassionate."</i></p>
+                        <h4>- Michael Brown</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog Section -->
+        <section class="blog-section">
+            <div class="container">
+                <div class="section-heading">
+                <h2>Latest News & Insights</h2>
+                <p>Stay informed with the latest legal news, insights, and updates from our experts.</p>
+                </div>
+
+                <div class="custom-slider">
+                <button class="slider-arrow prev">‹</button>
+                <div class="slider-track-wrapper">
+                    <div class="slider-track">
+                    <!-- Blog Post 1 -->
+                    <div class="light-card">
+                        <img src="/assets/images/personal-injury.webp" alt="Blog Post 1 Image">
+                        <div class="light-card-content">
+                        <h3>Understanding Your Rights in a Personal Injury Case</h3>
+                        <p>Learn about your legal rights and options if you've been injured in an accident.</p>
+                        <a class="btn-tretiary alt" href="#">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 2 -->
+                    <div class="light-card">
+                        <img src="/assets/images/devorce.webp" alt="Blog Post 2 Image">
+                        <div class="light-card-content">
+                        <h3>Top Tips for Navigating Divorce Proceedings</h3>
+                        <p>Divorce can be a challenging process. Discover our top tips for navigating divorce proceedings.</p>
+                        <a class="btn-tretiary alt" href="#">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div class="light-card">
+                        <img src="/assets/images/business.webp" alt="Blog Post 3 Image">
+                        <div class="light-card-content">
+                        <h3>How to Protect Your Business from Legal Risks</h3>
+                        <p>Running a business comes with legal risks. Discover how to protect your business.</p>
+                        <a class="btn-tretiary alt" href="#">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 4 -->
+                    <div class="light-card">
+                        <img src="/assets/images/employment-law.webp" alt="Blog Post 4 Image">
+                        <div class="light-card-content">
+                        <h3>Employment Law Updates You Need to Know</h3>
+                        <p>Stay up-to-date with the latest employment law changes that affect your workplace rights.</p>
+                        <a class="btn-tretiary alt" href="#">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 5 -->
+                    <div class="light-card">
+                        <img src="/assets/images/property-law.webp" alt="Blog Post 5 Image">
+                        <div class="light-card-content">
+                        <h3>Estate Planning Essentials for Your Family</h3>
+                        <p>Learn the importance of estate planning and how to protect your family's future.</p>
+                        <a class="btn-tretiary alt" href="#">Read More</a>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+                <button class="slider-arrow next">›</button>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer grid">
+                    <img src="/assets/logos/transparent-logo.png" alt="footer logo">
+                    <div class="footer-services-links flex">
+                            <h4>Quick Links</h4>
+                            <a href="/index.html">Home</a>
+                            <a href="/services.html">Services</a>
+                            <a href="/about.html">About</a>
+                            <a href="/contact.html">Contact</a>
+                        </div>
+                        <div class="footer-contact-info">
+                            <h4>Contact Information</h4>
+                            <p>123 Main Street, Dublin, Ireland</p>
+                            <p>Email: info@dublincitylawgroup.ie</p>
+                            <p>Phone: +353 1 234 5678</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

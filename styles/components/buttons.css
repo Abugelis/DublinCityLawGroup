@@ -6,6 +6,7 @@
     padding: 1rem 3rem;
     border-radius: var(--radius);
     font-weight: 500;
+    cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -21,7 +22,9 @@
     color: var(--color-neutral-light);
     border: 2px solid var(--color-primary);
     padding: 1rem 2rem;
+    font-weight: 500;
     border-radius: var(--radius);
+    cursor: pointer;
 }
 
 .btn-secondary:hover {
@@ -32,13 +35,15 @@
 }
 
 /* Tertiary Button filled, main color but smaller */
-.btn-tretiary {
+.btn-tretiary,
+.btn-tretiary.alt {
     background-color: var(--color-primary);
     color: var(--color-secondary);
     border: 2px solid var(--color-primary);
-    padding: 0.7rem 2rem;
+    padding: 1rem 2rem;
     border-radius: var(--radius);
     font-weight: 500;
+    cursor: pointer;
 }
 
 .btn-tretiary:hover {
@@ -46,6 +51,14 @@
     color: var(--color-neutral-light);
     border-color: var(--color-secondary);
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-tretiary.alt:hover {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: 1rem 2rem;
+    border-radius: var(--radius);
 }
 
 /* Responsive adjustments */

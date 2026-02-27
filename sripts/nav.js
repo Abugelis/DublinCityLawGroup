@@ -28,3 +28,22 @@ overlay.addEventListener("click", closeMenu);
 links.forEach(link => {
     link.addEventListener("click", closeMenu);
 });
+
+
+const navLinks = document.querySelectorAll('#navMenu a');
+
+const currentPath = window.location.pathname.replace('/index.html', '/') || '/';
+
+navLinks.forEach(link => {
+    const linkPath = new URL(link.href).pathname;
+
+    // Exact match
+    if (linkPath === currentPath) {
+        link.classList.add('active');
+    }
+
+    // Handle homepage edge case
+    if (currentPath === '/' && linkPath === '/index.html') {
+        link.classList.add('active');
+    }
+});

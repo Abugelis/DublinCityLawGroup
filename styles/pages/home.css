@@ -108,7 +108,7 @@
     }
 }
 
-/* ---------------------------- PRACTICE AREAS ------------------------------- */
+/* ---------------------------- PRACTICE AREAS SECTION ------------------------------- */
 
 .card.practice-item {
     text-align: center;
@@ -118,4 +118,89 @@
     color: var(--color-neutral-light);
     text-decoration: underline 2px var(--color-secondary);
     text-underline-offset: 4px;
+}
+
+/* ---------------------------- ABOUT SECTION ------------------------------- */
+
+.about-section {
+    background-color: var(--color-section-soft);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.about-text p:last-of-type {
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 767px) {
+    .about-text a {
+        display: block;
+        margin: 1rem auto 0;
+        width: fit-content;
+    }
+}
+
+@media (min-width: 768px) { 
+    .about-text a {
+        display: block;
+        margin: 1rem auto 0;
+        width: fit-content;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-content.flex {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+        align-items: flex-start;
+    }
+
+    .about-image {
+        flex: 1;
+    }
+
+    .about-text {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1440px) { 
+    .about-image img {
+        max-width: 30rem;
+        max-height: 30rem;
+    }
+
+    .about-image {
+        flex: 1;
+    }
+
+    .about-text {
+        flex: 2;
+    }
+}
+
+/* ---------------------------- SMALL CTA SECTION ------------------------------- */
+
+.small-cta {
+    background: linear-gradient(135deg,#0D2B45 0%,#1E4A73 100% );
+}
+
+.cta-content h2,
+.cta-content p {
+    color: var(--color-neutral-light);
+}
+
+
+/* ---------------------------- TESTIMONIALS SECTION ------------------------------- */
+
+.testimonial-card h4{
+    margin-top: auto;
+    text-align: right;
+    color: var(--color-secondary);
 }
