@@ -262,6 +262,27 @@ footer .grid {
     }
 }
 
+/* ---------------------------- SMALL CTA ------------------------------- */
+
+.small-cta {
+    background: linear-gradient(
+    135deg,
+    #0D2B45 0%,
+    #1E4A73 100%
+    );
+    color: var(--color-neutral-light);
+    text-align: center;
+    padding: 2rem var(--container-padding);
+}
+
+.small-cta h2 {
+    color: var(--color-neutral-light);
+    margin-bottom: 1rem;
+}
+
+.small-cta p {
+    padding-bottom: 2rem;
+}
 
 
 /* ---------------------------- GRID SYSTEM ------------------------------- */

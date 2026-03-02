@@ -1,0 +1,30 @@
+/* ---------------------------- PRACTICE AREAS SECTION ------------------------------- */
+
+.card.practice-item {
+    text-align: center;
+}
+
+.card.practice-item h3 {
+    color: var(--color-neutral-light);
+    text-decoration: underline 2px var(--color-secondary);
+    text-underline-offset: 4px;
+}
+
+.testimonial-card {
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* important for equal height cards */
+}
+
+.testimonial-card p {
+    margin-bottom: 1rem;
+}
+
+/* Signature */
+.testimonial-card h4 {
+    margin-top: auto;     /* pushes it to the bottom */
+    text-align: right;    /* align right */
+    font-size: var(--fs-h4);
+}
