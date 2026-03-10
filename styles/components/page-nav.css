@@ -1,0 +1,39 @@
+.page-navigation-section {
+    background-color: var(--color-primary);
+}
+
+.page-navigation-section .container {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.page-navigation {
+    display: flex;
+    flex-direction: row;
+    color: var(--color-neutral-light);
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-navigation a {
+    position: relative;
+    color: var(--color-secondary);
+    margin-bottom: auto;
+}
+
+.page-navigation a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background: var(--color-secondary);
+    transition: width var(--transition-medium);
+    transform: translateX(-50%);
+}
+
+.page-navigation a:hover::after {
+    width: 100%;
+}

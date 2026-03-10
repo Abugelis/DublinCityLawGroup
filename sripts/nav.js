@@ -26,7 +26,9 @@ overlay.addEventListener("click", closeMenu);
 
 /* Close on link click */
 links.forEach(link => {
-    link.addEventListener("click", closeMenu);
+    if (!link.parentElement.classList.contains("has-submenu")) {
+        link.addEventListener("click", closeMenu);
+    }
 });
 
 
@@ -46,4 +48,22 @@ navLinks.forEach(link => {
     if (currentPath === '/' && linkPath === '/index.html') {
         link.classList.add('active');
     }
+});
+
+
+/* MOBILE SUBMENU TOGGLE */
+
+const submenuParents = document.querySelectorAll(".has-submenu > a");
+
+submenuParents.forEach(parent => {
+    parent.addEventListener("click", (e) => {
+
+        if (window.innerWidth <= 767) {
+            e.preventDefault();
+
+            const li = parent.parentElement;
+            li.classList.toggle("open");
+        }
+
+    });
 });

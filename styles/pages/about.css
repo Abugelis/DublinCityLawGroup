@@ -58,6 +58,71 @@
     color: var(--color-secondary);
 }
 
+.our-values-section {
+    background-color: var(--color-section-soft);
+}
+
+.value-icon {
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+}
+
+.value-contnet h3 {
+    text-align: center;
+    color: var(--color-secondary);
+}
+
+.our-journey {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.journey-item h4 {
+    color: var(--color-secondary);
+    font-size: 1.6rem;
+}
+
+.journey-item p { 
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+.journey-top-decor,
+.journey-bottom-decor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+}
+
+.journey-top-decor-bubble,
+.journey-bottom-decor-bubble {
+    background-color: var(--color-accent);
+    height: 0.4rem;
+    width: 0.4rem;
+    border-radius: 1rem;
+}
+
+.journey-top-decor-line,
+.journey-bottom-decor-line {
+    background-color:var(--color-accent);
+    height: 3rem;
+    width: 0.1rem;
+}
+
+.journey-short-decor-line {
+    background-color: var(--color-accent);
+    height: 2rem;
+    width: 0.1rem;
+    align-items: center;
+}
+
 @media (min-width: 768px) {
     .about-content-wrapper.grid {
         display: flex;

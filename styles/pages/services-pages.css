@@ -1,0 +1,64 @@
+.page-intro-section {
+    background-color: var(--color-section-soft);
+}
+
+.single-page-intro-list-label {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.intro-list {
+    list-style: disc;
+}
+
+.intro-list > li {
+    margin-left: 2rem;
+}
+
+.page-article-section .container > h2 {
+    padding-top: 2rem;
+}
+
+.page-article-section .container > ul > li {
+    list-style: disc;
+    margin-left: 2rem;
+}
+
+.bottom-page-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-page-nav a {
+    color: var(--color-secondary);
+    transition: color var(--transition-medium);
+}
+
+.bottom-page-nav a:hover {
+    color: var(--color-accent);
+}
+
+.family-law-img {
+    object-position: center 20%;
+}
+
+@media (min-width: 768px) {
+
+    .page-intro-section .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .single-page-intro-para {
+        max-width: 45ch;
+    }
+
+    .intro-list > li {
+        font-size: 1.2rem;
+    }
+
+    .page-article-section .container > ul > li {
+        font-size: 1.2rem;
+    }
+}
