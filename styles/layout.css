@@ -185,6 +185,8 @@ header a:focus {
         display: flex;
         margin-top: 1rem;
     }
+
+   
 }
 
 
@@ -288,10 +290,7 @@ header a:focus {
     margin: 0;
 }
 
-.has-submenu > a::after {
-    content: " ▾";
-    font-size: 0.7rem;
-}
+
 
 /* ---------------------------- FOOTER ------------------------------- */
 footer {
