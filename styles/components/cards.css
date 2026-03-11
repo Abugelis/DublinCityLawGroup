@@ -25,7 +25,6 @@
 }
 
 .light-card {
-    flex: 0 0 250px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -33,11 +32,9 @@
     border-radius: var(--radius);
     color: var(--color-neutral-dark);
     box-shadow: var(--shadow);
-    background: linear-gradient(
-    135deg,
-    #F8F3E8 0%,
-    #EEDFC1 100%
-);
+    background: linear-gradient(135deg, #F8F3E8 0%, #EEDFC1 100%);
+    flex: 0 0 auto;        /* <-- use auto on mobile */
+    min-width: 85%;        /* <-- match slider-track-wrapper rule */
 }
 
 .light-card img {
@@ -70,6 +67,7 @@
 
     .light-card {
         flex: 0 0 350px;
+        min-width: 0;
     }
 }
 
