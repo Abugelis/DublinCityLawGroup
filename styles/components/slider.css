@@ -12,12 +12,14 @@
 .slider-track-wrapper {
     overflow: hidden;
     flex: 1;
+    overscroll-behavior-x: contain;
 }
 
 /* Track that moves */
 .slider-track {
     display: flex;
     gap: 20px;
+    will-change: transform;
     transition: transform 0.4s ease;
 }
 
@@ -62,5 +64,22 @@
 @media (max-width: 767px) {
     .slider-arrow {
         display: none;
+    }
+
+    .slider-track-wrapper {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        touch-action: pan-y;
+    }
+
+    .slider-track {
+        transition: none; /* stop JS animation fighting scroll */
+    }
+
+    .slider-track > * {
+        flex: 0 0 85%;
+        scroll-snap-align: start;
     }
 }

@@ -34,19 +34,13 @@ links.forEach(link => {
 
 const navLinks = document.querySelectorAll('#navMenu a');
 
-const currentPath = window.location.pathname.replace('/index.html', '/') || '/';
+const currentPath = window.location.pathname.replace(/\/$/, "");
 
 navLinks.forEach(link => {
-    const linkPath = new URL(link.href).pathname;
+    const linkPath = new URL(link.href).pathname.replace(/\/$/, "");
 
-    // Exact match
-    if (linkPath === currentPath) {
-        link.classList.add('active');
-    }
-
-    // Handle homepage edge case
-    if (currentPath === '/' && linkPath === '/index.html') {
-        link.classList.add('active');
+    if (currentPath === linkPath) {
+        link.classList.add("active");
     }
 });
 
