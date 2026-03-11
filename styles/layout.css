@@ -121,11 +121,14 @@ header a:focus {
         top: 0;
     }
 
-    /* Prevent temporary :active highlight on submenu links */
+    /* Remove all active/hover/focus highlight from submenu links on mobile */
+    #navMenu .submenu a,
     #navMenu .submenu a:active,
-    #navMenu .submenu a:focus {
-        color: inherit;
-        background: none;
+    #navMenu .submenu a:focus,
+    #navMenu .submenu a:hover {
+        color: inherit;       /* keep text color same as normal */
+        background: none;     /* remove background highlight */
+        transition: none;     /* disable transition easing */
     }
 
     /* Show hamburger */
