@@ -164,6 +164,8 @@ header a:focus {
 
     .no-scroll {
         overflow: hidden;
+        position: fixed;
+        width: 100%;
     }
 
     /* MOBILE SUBMENU */
