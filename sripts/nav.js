@@ -1,9 +1,3 @@
-if (window.innerWidth <= 767) return;
-
-const track = document.querySelector(".slider-track");
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
-
 const toggle = document.getElementById("navToggle");
 const nav = document.getElementById("navMenu");
 const overlay = document.getElementById("overlay");

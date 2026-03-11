@@ -69,33 +69,6 @@ prevBtn.addEventListener('click', () => {
   updateSlider();
 });
 
-// Swipe support
-let startX = 0;
-let isDragging = false;
-
-sliderTrack.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-  isDragging = true;
-});
-
-sliderTrack.addEventListener('touchmove', (e) => {
-  if (!isDragging) return;
-
-  const diff = e.touches[0].clientX - startX;
-  sliderTrack.style.transform = `translateX(${-currentIndex * getCardWidth() + diff}px)`;
-});
-
-sliderTrack.addEventListener('touchend', (e) => {
-  isDragging = false;
-
-  const diff = e.changedTouches[0].clientX - startX;
-
-  if (diff < -50) currentIndex++;
-  if (diff > 50) currentIndex--;
-
-  updateSlider();
-});
-
 // Handle resize (VERY important for responsiveness)
 window.addEventListener('resize', updateSlider);
 
