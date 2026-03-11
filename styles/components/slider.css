@@ -75,7 +75,10 @@
     }
 
     .slider-track {
-        transition: none; /* stop JS animation fighting scroll */
+        display: flex;
+        gap: 20px;
+        transform: none !important;
+        transition: none !important;
     }
 
     .slider-track > * {
