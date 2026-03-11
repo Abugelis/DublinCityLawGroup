@@ -121,6 +121,13 @@ header a:focus {
         top: 0;
     }
 
+    /* Prevent temporary :active highlight on submenu links */
+    #navMenu .submenu a:active,
+    #navMenu .submenu a:focus {
+        color: inherit;
+        background: none;
+    }
+
     /* Show hamburger */
     .nav-toggle {
         display: flex;
