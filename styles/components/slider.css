@@ -64,11 +64,16 @@
 }
 
 .slider-arrow.prev {
-    left: -20px;
+    left: -60px;
 }
 
 .slider-arrow.next {
-    right: -20px;
+    right: -60px;
+}
+
+.slider-arrow.prev:hover,
+.slider-arrow.next:hover {
+    background-color: var(--color-primary);
 }
 
 @media (max-width: 767px) {

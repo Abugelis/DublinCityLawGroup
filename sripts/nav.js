@@ -1,8 +1,8 @@
 const toggle = document.getElementById("navToggle");
 const nav = document.getElementById("navMenu");
 const overlay = document.getElementById("overlay");
-const links = nav.querySelectorAll("a");
 
+// ------------------------ MENU OPEN/CLOSE ------------------------
 function openMenu() {
     nav.classList.add("active");
     toggle.classList.add("active");
@@ -17,53 +17,53 @@ function closeMenu() {
     document.body.classList.remove("no-scroll");
 }
 
+// Hamburger click
 toggle.addEventListener("click", () => {
     nav.classList.contains("active") ? closeMenu() : openMenu();
 });
 
-/* Close on overlay click */
+// Close on overlay click
 overlay.addEventListener("click", closeMenu);
 
-/* Close on link click */
+// ------------------------ LINK CLICK ------------------------
+// Close menu when top-level links are clicked
+const links = nav.querySelectorAll("#navMenu > ul > li > a"); // only top-level
 links.forEach(link => {
-    if (!link.parentElement.classList.contains("has-submenu")) {
-        link.addEventListener("click", closeMenu);
-    }
+    link.addEventListener("click", closeMenu);
 });
 
-
-const navLinks = document.querySelectorAll('#navMenu a');
-
+// ------------------------ ACTIVE LINK HIGHLIGHT ------------------------
+const allLinks = document.querySelectorAll("#navMenu a");
 const currentPath = window.location.pathname
     .replace(/\/$/, "")
     .replace("index.html", "");
 
-navLinks.forEach(link => {
-
-    const linkPath = new URL(link.href).pathname
+allLinks.forEach(link => {
+    const linkPath = new URL(link.href, window.location.origin).pathname
         .replace(/\/$/, "")
         .replace("index.html", "");
 
     if (currentPath === linkPath) {
         link.classList.add("active");
-    }
 
+        // Highlight parent menu if this is a submenu
+        const parentLi = link.closest(".has-submenu");
+        if (parentLi) {
+            parentLi.querySelector("> a").classList.add("active");
+        }
+    }
 });
 
-
-/* MOBILE SUBMENU TOGGLE */
-
+// ------------------------ MOBILE SUBMENU TOGGLE ------------------------
 const submenuParents = document.querySelectorAll(".has-submenu > a");
 
 submenuParents.forEach(parent => {
     parent.addEventListener("click", (e) => {
-
         if (window.innerWidth <= 767) {
             e.preventDefault();
 
             const li = parent.parentElement;
             li.classList.toggle("open");
         }
-
     });
 });
