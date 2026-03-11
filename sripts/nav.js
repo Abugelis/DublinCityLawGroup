@@ -61,6 +61,7 @@ submenuParents.forEach(parent => {
     parent.addEventListener("click", (e) => {
         if (window.innerWidth <= 767) {
             e.preventDefault();
+            e.stopPropagation(); // 🔹 Prevent first touch from activating submenu item underneath
 
             const li = parent.parentElement;
             li.classList.toggle("open");
