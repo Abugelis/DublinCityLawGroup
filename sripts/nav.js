@@ -26,10 +26,12 @@ toggle.addEventListener("click", () => {
 overlay.addEventListener("click", closeMenu);
 
 // ------------------------ LINK CLICK ------------------------
-// Close menu when top-level links are clicked
+// Close menu when top-level links are clicked, EXCEPT those with submenu
 const links = nav.querySelectorAll("#navMenu > ul > li > a"); // only top-level
 links.forEach(link => {
-    link.addEventListener("click", closeMenu);
+    if (!link.parentElement.classList.contains("has-submenu")) {
+        link.addEventListener("click", closeMenu);
+    }
 });
 
 // ------------------------ ACTIVE LINK HIGHLIGHT ------------------------
@@ -61,7 +63,7 @@ submenuParents.forEach(parent => {
     parent.addEventListener("click", (e) => {
         if (window.innerWidth <= 767) {
             e.preventDefault();
-            e.stopPropagation(); // 🔹 Prevent first touch from activating submenu item underneath
+            e.stopPropagation(); // Prevent accidental click on first submenu item
 
             const li = parent.parentElement;
             li.classList.toggle("open");
