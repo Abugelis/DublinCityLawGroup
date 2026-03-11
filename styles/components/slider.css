@@ -1,88 +1,62 @@
-/* Slider container: reserve space for arrows */
 .custom-slider {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 10px;
-
-    
-    position: relative;
 }
 
-/* Track wrapper with overflow hidden */
+/* Scroll container */
 .slider-track-wrapper {
-    overflow: hidden;
-    flex: 1;
-    overscroll-behavior-x: contain;
-}
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
 
-/* Track that moves */
-.slider-track {
     display: flex;
     gap: 20px;
-    will-change: transform;
-    transition: transform 0.4s ease;
+
+    padding: 10px 0;
 }
 
-/* Arrows sit outside cards now */
+/* Cards */
+.slider-track-wrapper > * {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+
+    .slider-track-wrapper > * {
+        flex: 0 0 calc(33.333% - 14px);
+    }
+
+}
+
+/* Arrows */
 .slider-arrow {
-    position: relative; /* no more absolute */
-    transform: none;    /* remove translate */
     width: 40px;
     height: 40px;
-    font-size: 24px;
     border-radius: 50%;
     border: none;
-    background-color: var(--color-secondary);
+    background: var(--color-secondary);
     color: white;
+    font-size: 22px;
     cursor: pointer;
-    flex-shrink: 0; /* prevent shrinking */
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-/* Margin between arrows and track */
 .slider-arrow.prev {
-    margin-right: 10px;
+    left: -20px;
 }
 
 .slider-arrow.next {
-    margin-left: 10px;
-}
-
-.slider-arrow:hover {
-    background-color: var(--color-accent);
-}
-
-.slider-arrow:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-}
-
-.slider-track img {
-    user-select: none;
-    pointer-events: none;
+    right: -20px;
 }
 
 @media (max-width: 767px) {
     .slider-arrow {
         display: none;
-    }
-
-    .slider-track-wrapper {
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-        touch-action: pan-y;
-    }
-
-    .slider-track {
-        display: flex;
-        gap: 20px;
-        transform: none !important;
-        transition: none !important;
-    }
-
-    .slider-track > * {
-        flex: 0 0 85%;
-        scroll-snap-align: start;
     }
 }
