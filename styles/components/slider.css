@@ -6,20 +6,35 @@
 
 /* Scroll container */
 .slider-track-wrapper {
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-
     display: flex;
     gap: 20px;
 
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    width: 100%;
     padding: 10px 0;
+
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Cards */
 .slider-track-wrapper > * {
     flex: 0 0 85%;
+    min-width: 85%;
     scroll-snap-align: start;
+}
+
+/* Hide scrollbar */
+.slider-track-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-track-wrapper {
+    scrollbar-width: none;
 }
 
 /* Desktop layout */
@@ -27,6 +42,7 @@
 
     .slider-track-wrapper > * {
         flex: 0 0 calc(33.333% - 14px);
+        min-width: calc(33.333% - 14px);
     }
 
 }
